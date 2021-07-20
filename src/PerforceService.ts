@@ -1,4 +1,3 @@
-import { IPerforceConfig } from './PerforceService';
 import {
     workspace,
     window,
@@ -13,7 +12,6 @@ import { Display } from './Display';
 import * as CP from 'child_process';
 
 export interface IPerforceConfig {
-
     // p4 standard configuration variables
     p4Client?: string;
     p4Host?: string;
@@ -22,14 +20,14 @@ export interface IPerforceConfig {
     p4Tickets?: string;
     p4User?: string;
 
-    // specific to this exension
+    // specific to this extension
     // use this value as the clientRoot PWD for this .p4config file's location
     p4Dir?: string;
 
     // root directory of the user space (or .p4config)
     localDir: string;
 
-    // whether to strip the localDir when calling espansePath
+    // whether to strip the localDir
     stripLocalDir?: boolean;
 }
 
@@ -38,7 +36,7 @@ export function matchConfig(config: IPerforceConfig, uri: Uri): boolean {
     const trailingSlash = /^(.*)(\/)$/;
     let compareDir = Utils.normalize(uri.fsPath);
     if (!trailingSlash.exec(compareDir)) compareDir += '/';
-    
+
     if (config.localDir === compareDir) {
         return true;
     }
@@ -47,7 +45,6 @@ export function matchConfig(config: IPerforceConfig, uri: Uri): boolean {
 }
 
 export namespace PerforceService {
-
     let _configs: {[key: string]: IPerforceConfig} = {};
 
     export function addConfig(inConfig: IPerforceConfig, workspacePath: string): void {
@@ -184,7 +181,7 @@ export namespace PerforceService {
             Display.channel.append(stdout.toString());
         }
     }
-	
+
 	/*
     export function handleCommonServiceResponse(err: Error, stdout: string, stderr: string) {
         if (err) {
@@ -196,7 +193,7 @@ export namespace PerforceService {
         }
     }
 	*/
-	
+
     export function getClientRoot(resource: Uri): Promise<string> {
         return new Promise((resolve, reject) => {
             PerforceService.executeAsPromise(resource, 'info').then((stdout) => {
@@ -238,7 +235,7 @@ export namespace PerforceService {
                     return;
                 }
 
-                //Resolve with p4 config filename as string
+                // Resolve with p4 config filename as string
                 resolve(stdout.substring(configIndex, endConfigIndex));
             }).catch((err) => {
                 reject(err);
