@@ -23,12 +23,10 @@ import { Display } from './Display';
 import { Utils } from './Utils';
 
 
-
-
 // activate() is called when the extension is activated.
 // The extension is activated the first time the command is executed.
 export function activate(context: vscode.ExtensionContext) {
-	//console.log('"SF Tools" is now active!');
+	//console.log('"SFDC Tools" is now active!');
 
 	// The commands here are defined in the package.json file.
 	// The commandId parameters must match the command fields in package.json.

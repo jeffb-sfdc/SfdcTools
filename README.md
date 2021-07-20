@@ -1,6 +1,6 @@
-# SF Tools README
+# SFDC Tools README
 
-This is the README for the "SF Tools" Extension.
+This is the README for the "SFDC Tools" Extension.
 
 ## Features
 
@@ -54,4 +54,4 @@ Ideally, I'd like to have the text caret anywhere within a test, and then be abl
 
 ### 1.0.0
 
-Initial release of SF Tools
+Initial release of SFDC Tools

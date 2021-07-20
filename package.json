@@ -1,7 +1,7 @@
 {
 	"name": "sfdctools",
-	"displayName": "SF Tools",
-	"description": "SF Tools",
+	"displayName": "SFDc Tools",
+	"description": "SFDC Tools",
 	"version": "1.0.1",
 	"publisher": "Salesforce-ESW-Snap-Ins",
 	"engines": {
@@ -199,7 +199,7 @@
 		},
 		"configuration": {
 			"type": "object",
-			"title": "SF Tools",
+			"title": "SFDC Tools",
 			"properties": {
 				"sfdctools.p4UserName": {
 					"type": [
