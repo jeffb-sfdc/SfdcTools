@@ -1,5 +1,3 @@
-'use strict';
-
 import * as vscode from 'vscode';
 import UserSettings from './userSettings';
 import * as messageUtilities from './messageUtilities';

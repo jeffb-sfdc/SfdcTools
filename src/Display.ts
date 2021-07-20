@@ -12,8 +12,7 @@ import { Utils } from './Utils';
 
 var _statusBarItem : StatusBarItem;
 
-export namespace Display
-{
+export namespace Display {
     export var channel = window.createOutputChannel('Perforce Log');
 
     export function initialize() {

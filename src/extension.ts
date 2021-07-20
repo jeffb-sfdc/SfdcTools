@@ -1,5 +1,3 @@
-'use strict';
-
 import * as vscode from 'vscode';
 import * as childProcess from 'child_process';
 import * as fs from 'fs';
@@ -173,7 +171,6 @@ export function deactivate() {
 // Callbacks
 
 function p4LogIn(): void {
-	let filePath: string = getFilePathOfCurrentDocument();
 	sendCommandToTerminal(`echo ${SfdcToolsUserSettings.getSetting("p4Password")}|p4 login`);
 }
 
@@ -326,8 +323,8 @@ function openFileInOpenGrok(): void {
 	let sourceControlPath: string = getSourceControlPathOfCurrentDocument();
 	let pathSplit: string[] = sourceControlPath.split("/");
 	let prefix: string = (pathSplit[1] === "main")
-							? "app_main_core/"
-							: `app_${pathSplit[1]}_${pathSplit[2]}_core/`;
+		? "app_main_core/"
+		: `app_${pathSplit[1]}_${pathSplit[2]}_core/`;
 	openFileInApplication(
 		SfdcToolsUserSettings.getSetting("filePathToBrowser"),
 		`https://codesearch.data.sfdc.net/source/xref/${prefix}${sourceControlPath}`
