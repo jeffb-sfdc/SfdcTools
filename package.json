@@ -1,0 +1,291 @@
+{
+	"name": "sfdctools",
+	"displayName": "SF Tools",
+	"description": "SF Tools",
+	"version": "1.0.1",
+	"publisher": "Salesforce-ESW-Snap-Ins",
+	"engines": {
+		"vscode": "^1.26.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.sfdcTools.p4LogIn",
+		"onCommand:extension.sfdcTools.p4CheckOut",
+		"onCommand:extension.sfdcTools.p4Revert",
+		"onCommand:extension.sfdcTools.p4Add",
+		"onCommand:extension.sfdcTools.p4Diff",
+		"onCommand:extension.sfdcTools.p4DiffRevision",
+
+		"onCommand:extension.sfdcTools.openFileInP4V",
+		"onCommand:extension.sfdcTools.openFileInEclipse",
+		"onCommand:extension.sfdcTools.openFileInIntelliJ",
+		"onCommand:extension.sfdcTools.openFileInSwarm",
+		"onCommand:extension.sfdcTools.openFileInOpenGrok",
+
+		"onCommand:extension.sfdcTools.runCurrentComponentTest",
+		"onCommand:extension.sfdcTools.runAllComponentTests",
+		"onCommand:extension.sfdcTools.createUnitTest",
+		"onCommand:extension.sfdcTools.runUnitTest",
+		"onCommand:extension.sfdcTools.runAllUnitTests",
+		"onCommand:extension.sfdcTools.debugUnitTest",
+
+		"onCommand:extension.sfdcTools.runEswCheck"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.sfdcTools.p4LogIn",
+				"title": "P4 Log In"
+			},
+			{
+				"command": "extension.sfdcTools.p4CheckOut",
+				"title": "P4 Check Out"
+			},
+			{
+				"command": "extension.sfdcTools.p4Revert",
+				"title": "P4 Revert"
+			},
+			{
+				"command": "extension.sfdcTools.p4Add",
+				"title": "P4 Add"
+			},
+			{
+				"command": "extension.sfdcTools.p4Diff",
+				"title": "P4 Diff"
+			},
+			{
+				"command": "extension.sfdcTools.p4DiffRevision",
+				"title": "P4 Diff Revision..."
+			},
+
+
+			{
+				"command": "extension.sfdcTools.openFileInP4V",
+				"title": "Open In P4V"
+			},
+			{
+				"command": "extension.sfdcTools.openFileInEclipse",
+				"title": "Open In Eclipse"
+			},
+			{
+				"command": "extension.sfdcTools.openFileInIntelliJ",
+				"title": "Open In IntelliJ"
+			},
+			{
+				"command": "extension.sfdcTools.openFileInSwarm",
+				"title": "Open In Swarm"
+			},
+			{
+				"command": "extension.sfdcTools.openFileInOpenGrok",
+				"title": "Open In OpenGrok"
+			},
+
+
+			{
+				"command": "extension.sfdcTools.runCurrentComponentTest",
+				"title": "Run Current Component Test"
+			},
+			{
+				"command": "extension.sfdcTools.runAllComponentTests",
+				"title": "Run All Component Tests"
+			},
+			{
+				"command": "extension.sfdcTools.createUnitTest",
+				"title": "Create Unit Tests"
+			},
+			{
+				"command": "extension.sfdcTools.runUnitTest",
+				"title": "Run Unit Test"
+			},
+			{
+				"command": "extension.sfdcTools.runAllUnitTests",
+				"title": "Run All Unit Tests"
+			},
+			{
+				"command": "extension.sfdcTools.debugUnitTest",
+				"title": "Debug Unit Tests"
+			},
+
+
+			{
+				"command": "extension.sfdcTools.runEswCheck",
+				"title": "Run ESW-Check"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.sfdcTools.p4LogIn",
+					"group": "SfdcToolsGroup@001"
+				},
+				{
+					"command": "extension.sfdcTools.p4CheckOut",
+					"group": "SfdcToolsGroup@002"
+				},
+				{
+					"command": "extension.sfdcTools.p4Revert",
+					"group": "SfdcToolsGroup@003"
+				},
+				{
+					"command": "extension.sfdcTools.p4Add",
+					"group": "SfdcToolsGroup@004"
+				},
+				{
+					"command": "extension.sfdcTools.p4Diff",
+					"group": "SfdcToolsGroup@005"
+				},
+				{
+					"command": "extension.sfdcTools.p4DiffRevision",
+					"group": "SfdcToolsGroup@006"
+				},
+
+
+				{
+					"command": "extension.sfdcTools.openFileInP4V",
+					"group": "SfdcToolsGroup@101"
+				},
+				{
+					"command": "extension.sfdcTools.openFileInEclipse",
+					"group": "SfdcToolsGroup@102"
+				},
+				{
+					"command": "extension.sfdcTools.openFileInIntelliJ",
+					"group": "SfdcToolsGroup@103"
+				},
+				{
+					"command": "extension.sfdcTools.openFileInSwarm",
+					"group": "SfdcToolsGroup@104"
+				},
+				{
+					"command": "extension.sfdcTools.openFileInOpenGrok",
+					"group": "SfdcToolsGroup@105"
+				},
+
+
+				{
+					"command": "extension.sfdcTools.runCurrentComponentTest",
+					"group": "SfdcToolsGroup@201"
+				},
+				{
+					"command": "extension.sfdcTools.runAllComponentTests",
+					"group": "SfdcToolsGroup@202"
+				},
+				{
+					"command": "extension.sfdcTools.createUnitTest",
+					"group": "SfdcToolsGroup@203"
+				},
+				{
+					"command": "extension.sfdcTools.runUnitTest",
+					"group": "SfdcToolsGroup@204"
+				},
+				{
+					"command": "extension.sfdcTools.runAllUnitTests",
+					"group": "SfdcToolsGroup@205"
+				},
+				{
+					"command": "extension.sfdcTools.debugUnitTest",
+					"group": "SfdcToolsGroup@206"
+				},
+
+
+				{
+					"command": "extension.sfdcTools.runEswCheck",
+					"group": "SfdcToolsGroup@301"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "SF Tools",
+			"properties": {
+				"sfdctools.p4UserName": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "sfdctools.p4UserName Your Perforce user name."
+				},
+				"sfdctools.p4Password": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "sfdctools.p4Password Your Perforce password."
+				},
+				"sfdctools.filePathToP4V": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "sfdctools.filePathToP4V The file path to use for your local instance of P4V."
+				},
+				"sfdctools.filePathToEclipse": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "sfdctools.filePathToEclipse The file path to use for your local instance of Eclipse."
+				},
+				"sfdctools.filePathToIntelliJ": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "sfdctools.filePathToIntelliJ The file path to use for your local instance of IntelliJ."
+				},
+				"sfdctools.filePathToBrowser": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "sfdctools.filePathToBrowser The file path to use for your web browser."
+				},
+				"sfdctools.filePathToDiffApp": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "sfdctools.filePathToDiffApp The file path to the diffing app.  Leave blank to use VS Code's built-in differ."
+				},
+				"sfdctools.localOrgDomain": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "sfdctools.localOrgDomain The file path to use for your local Org."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/tests/integrationTests"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.21",
+		"tslint": "^5.8.0",
+		"@types/node": "^8.10.25",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"@types/lodash": "^4.14.116",
+		"clipboardy": "^1.2.3",
+		"lodash": "^4.17.10",
+		"tmp": "0.0.33"
+	}
+}
